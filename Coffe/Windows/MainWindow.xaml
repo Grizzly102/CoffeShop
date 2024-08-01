@@ -1,0 +1,36 @@
+﻿<Window x:Class="Coffeeshop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Coffeeshop"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="350" Width="400" FontFamily="Century Gothic" FontSize="20"  WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Background="GhostWhite">
+        <Image Height="100" Width="150" VerticalAlignment="Top" Source="/image/CoffeLogo.png"/>
+        <StackPanel VerticalAlignment="Center" Margin="0 70 0 0" HorizontalAlignment="Center" Width="260">
+            <Label Content="Логин:"/>
+            <TextBox x:Name="Login_TextBox" FontSize="18"/>
+            <Label Content="Пароль:"/>
+            <PasswordBox x:Name="Password_PasswordBox" FontSize="18"/>
+            <Button x:Name="Autorez_Button"  Content="Войти" Click="Autorez_Button_Click" Width="100" Margin="0,20,0,0" FontSize="16"/>
+            <Button Background="GhostWhite" x:Name="Reg_Button" Content="В первый раз здесь? Зарегистрируйтесь" FontSize="12" Click="Reg_Button_Click" Width="250" Margin="0,10,0,0" BorderBrush="GhostWhite" FontStretch="SemiExpanded" BorderThickness="1,1,1,1"/>
+      
+        </StackPanel>
+        <Button x:Name="BackBt" Click="BackBt_Click" HorizontalAlignment="Left" Margin="0,0,0,0" Height="35" VerticalAlignment="Top" Width="35" >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image Name="image" Stretch="Fill" Source="\Image\back.png" />
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"  Value="true">
+                            <Setter TargetName="image" Property="Source" Value="\Image/back.png"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed"  Value="true">
+                            <Setter TargetName="image" Property="Source"  Value="\Image/back.png" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Window>

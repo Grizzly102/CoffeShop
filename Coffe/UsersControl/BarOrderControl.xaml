@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Coffe.UsersControl.BarOrderControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Coffe.UsersControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" FontFamily="Century Gothic" FontSize="16">
+    <Grid>
+        <Border Background="Black" BorderThickness="3">
+            <Grid x:Name="Order_Grid" Background="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding Photo, TargetNullValue={StaticResource Plug}}" Width="120" Height="120" Margin="5"/>
+                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0">
+                    <TextBlock Visibility="Hidden" Name="Art" Text="{Binding Article}"/>
+                    <TextBlock Text="{Binding ProductName}"/>
+                    <TextBlock>
+ <Run Text="Цена: "/>
+ <Run Name="CostText" Text="{Binding Cost}" FontWeight="Bold"/>
+  <Run Name="StatPrice" Text="{Binding Cost}" FontWeight="Bold" FontSize="0,1"/>
+ <Run  Text="р." FontWeight="Bold"/>
+                    </TextBlock>
+                </StackPanel>
+               
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

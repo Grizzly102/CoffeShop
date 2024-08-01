@@ -1,0 +1,60 @@
+﻿<Window x:Class="Coffeeshop.Windows.OrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Coffeeshop.Windows"
+        mc:Ignorable="d"
+        Title="Оформление заказа" Height="565" Width="600" Loaded="Window_Loaded" FontFamily="Century Gothic" FontSize="14"  WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Background="GhostWhite">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" MinHeight="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+       
+        <ListBox  Grid.Row="3" Grid.ColumnSpan="3" x:Name="Order_ListBox" Margin="4" VirtualizingPanel.ScrollUnit="Pixel" Height="300" VerticalAlignment="Top" BorderThickness="1">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    <Setter Property="Margin" Value="4"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+        <Button Height="20" Width="100" HorizontalAlignment="Right" Grid.Column="3" Content="Очистить" Background="White" Click="Button_Click"/>
+        <StackPanel VerticalAlignment="Top" Grid.Row="3" Grid.Column="1" Margin="0,306,0,0" Height="208">
+            <TextBlock x:Name="Order_Cost" Text=""/>
+            <TextBlock Margin="0,10,0,0">
+                Самовывоз из<LineBreak/>
+                Кофейни "Космос" Уфа<LineBreak/>
+                ул. Пушкина, 29
+            </TextBlock>
+            <TextBlock x:Name="OrderNumber" Text="Номер заказа:"/>
+            <TextBlock x:Name="mail" Text="Почта(для получения чека):"/>
+            <TextBox x:Name="mailbox" Height="20"/>
+
+            <Button Background="White" Content="Оформить заказ" Margin="0,13,0,0" Width="130" Click="PayOrder_ButtonClick"/>
+        </StackPanel>
+        <Button x:Name="BackBt" Click="Back_ButtonClick" HorizontalAlignment="Left" Margin="0,0,0,0" Height="35" VerticalAlignment="Top" Width="35" >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image Name="image" Stretch="Fill" Source="\Image\back.png" />
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"  Value="true">
+                            <Setter TargetName="image" Property="Source" Value="\Image/back.png"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed"  Value="true">
+                            <Setter TargetName="image" Property="Source"  Value="\Image/back.png" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Window>

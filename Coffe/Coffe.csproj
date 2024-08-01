@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Image\americano.jpg" />
+    <None Remove="Image\avatar.png" />
+    <None Remove="Image\avatar2.png" />
+    <None Remove="Image\back.png" />
+    <None Remove="Image\basket.png" />
+    <None Remove="Image\blacktea.jpg" />
+    <None Remove="Image\cappuccino.jpg" />
+    <None Remove="Image\chocolatedonut.jpg" />
+    <None Remove="Image\coffeeshop.JPG" />
+    <None Remove="Image\coffeeshop2.JPG" />
+    <None Remove="Image\CoffeLogo.png" />
+    <None Remove="Image\del.png" />
+    <None Remove="Image\espesso.jpg" />
+    <None Remove="Image\greentea.jpg" />
+    <None Remove="Image\inf.png" />
+    <None Remove="Image\latte.jpg" />
+    <None Remove="Image\login.png" />
+    <None Remove="Image\menu.png" />
+    <None Remove="Image\point.png" />
+    <None Remove="Image\raspberrydonut.jpg" />
+    <None Remove="Image\zaglushka.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="7.0.19" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.19">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\americano.jpg" />
+    <Resource Include="Image\avatar.png" />
+    <Resource Include="Image\avatar2.png" />
+    <Resource Include="Image\back.png" />
+    <Resource Include="Image\basket.png" />
+    <Resource Include="Image\blacktea.jpg" />
+    <Resource Include="Image\cappuccino.jpg" />
+    <Resource Include="Image\chocolatedonut.jpg" />
+    <Resource Include="Image\coffeeshop2.JPG" />
+    <Resource Include="Image\coffeeshop.JPG" />
+    <Resource Include="Image\CoffeLogo.png" />
+    <Resource Include="Image\del.png" />
+    <Resource Include="Image\espesso.jpg" />
+    <Resource Include="Image\greentea.jpg" />
+    <Resource Include="Image\inf.png" />
+    <Resource Include="Image\latte.jpg" />
+    <Resource Include="Image\login.png" />
+    <Resource Include="Image\menu.png" />
+    <Resource Include="Image\point.png" />
+    <Resource Include="Image\raspberrydonut.jpg" />
+    <Resource Include="Image\zaglushka.png" />
+  </ItemGroup>
+
+</Project>

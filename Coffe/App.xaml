@@ -1,0 +1,9 @@
+﻿<Application x:Class="Coffe.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Coffe"
+             StartupUri="Windows/StartWindow.xaml">
+    <Application.Resources>
+        <BitmapImage x:Key="Plug" UriSource="Image/zaglushka.png"/>
+    </Application.Resources>
+</Application>
